@@ -2,13 +2,14 @@ package model.data.comparator;
 
 import java.util.Comparator;
 
+
 import model.data.Device;
 
 public class DeviceTypeComparator implements Comparator<Device>{
 
 	@Override
-	public int compare(Device dev1, Device dev2) {
+	public int compare(Device cus1, Device cus2) {
 
-		 return dev1.getType().compareTo(dev1.getType());
+		 return cus1.getType().compareTo(cus2.getType());
 	}
 }

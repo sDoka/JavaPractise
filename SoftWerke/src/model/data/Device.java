@@ -7,8 +7,8 @@ package model.data;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 
+import model.data.comparator.CustomerFioComparator;
 import model.data.comparator.DeviceMarkComparator;
 import model.data.comparator.DeviceTypeComparator;
 import model.data.comparator.DeviceIdComparator;
@@ -79,7 +79,6 @@ public class Device {
 	
 	public  ArrayList<Device> makeDevices()//создание списка клиентов
 	{
-		
 		DevicesStore cus  = new DevicesStore();
 		return cus.makeDevices();
 	}

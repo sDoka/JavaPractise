@@ -10,7 +10,8 @@ public class DevicesStore {
 	   ArrayList<Device> devList = new ArrayList<Device>(); 
 	   String[] colors =  new String[]{"Жёлтый","Красный","Чёрный","Белый","Зелёный","Синий","Оранжевый"};
 		String[] types =  new String[]{"Смартфон","Планшет","Ноутбук","Плеер"};
-		String[] marks = new String[]{"LG","Samsung","Alctatel","Apple","Sony","Panasonic","Phillips"};
+	  // int[] types = {1994, 1958, 2010, 1912, 1916, 1992, 1975};
+		String[] marks = new String[]{"Лыжа","Самсунг","Алкотел","Яппл","Сони","Панасоник","Филиппс"};
 		int[] years = {1994, 1958, 2010, 1912, 1916, 1992, 1975};
 		public ArrayList<Device>  makeDevices()
 		{

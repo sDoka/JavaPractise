@@ -16,22 +16,39 @@ public class DeviceController {
 	   }
 
 
-	   public void setDeviceName(String type){//задаёт имя клиента
+	   public void setDeviceType(String type){//задаёт тип девайса
 	      model.setType(type);		
 	   }
 
-	   public String getDeviceName(){//возвращает имя клиента
+	   public String getDeviceType(){//возвращает тип девайса
 	      return model.getType();		
 	   }
+	   public void setDeviceMark(String type){//задаёт марку девайса
+		      model.setMark(type);		
+		   }
 
-	   public void setDevicebirthDate(int birthDate){//устанавливает дату рождения клиента
-	      model.setDate(birthDate);		
+		   public String getDeviceMark(){//возвращает марку девайса
+		      return model.getMark();		
+		   }
+
+	   public void setDeviceDate(int Date){//устанавливает дату изготовления девайса
+	      model.setDate(Date);		
 	   }
 
-	   public int getDevicebirthDate(){//возвращает дату рождения клиента
+	   public int getDeviceDate(){//возвращает дату изготовления девайса
 	      return model.getDate();		
 	   }
 
+	   public void setDeviceColor(String type){//задаёт цвет девайса
+		      model.setColor(type);		
+		   }
+
+		   public String getDeviceColor(){//возвращает цвет девайса
+		      return model.getColor();		
+		   }
+	   
+	   
+	   
 	   public void setDevices()
 	   {
 		   devList = model.makeDevices();
@@ -46,9 +63,10 @@ public class DeviceController {
 		   return devList;
 	   }
 	   
-	   public   ArrayList<Device> sortByType()
+	   public   ArrayList<Device> sortByType()//не хочет работать сортировка по строковым эл-там
 	   {
-		   return model.sortByType(devList);
+		   
+		   return  model.sortByType(devList);
 	   }
 	   
 	   public   ArrayList<Device> sortByMark()

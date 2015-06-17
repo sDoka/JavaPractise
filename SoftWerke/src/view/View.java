@@ -27,7 +27,7 @@ public class View {
 		 System.out.println("-findByYear   Год    -По году рождения");
 		 System.out.println("------------------------------------");
 		 System.out.println("-addCustomer Имя ГодРождения      -Добавить клиента");
-		 System.out.println("-back             				   -Вернуться в главное меню");
+		 System.out.println("-back             	 -Вернуться в главное меню");
 	 }
 	 public void helpDevice()
 	 {
@@ -45,11 +45,15 @@ public class View {
 		 System.out.println("-findById         -По Id");
 		 System.out.println("-findByYear       -По году выпуска");
 		 System.out.println("------------------------------------");
-		 System.out.println("-addCustomer Имя ГодРождения      -Добавить клиента");
-		 System.out.println("-back             				   -Вернуться в главное меню");
+		 System.out.println("-addDevice параметры через ','    -Добавить устройство");
+		 System.out.println("-back             	 -Вернуться в главное меню");
 	 }
 	 public void wrongCommand()
 	 {
 		 System.out.println("Неверная комманда, попробуйте ещё раз либо введите -help");
+	 }
+	 public void youAreBack()
+	 {
+		 System.out.println("Вы снова в главном меню -devices -customers -sales");
 	 }
 }

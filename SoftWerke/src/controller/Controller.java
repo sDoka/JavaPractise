@@ -22,10 +22,11 @@ import view.View;
 public class Controller {
 	
 	//инициализируем и определяем устройства
-    Device devmodel  = new Device();
-//создаём представление для вывода на экран инфы по покупателям
-    DeviceView devView = new DeviceView();      
+	  Device devmodel  = new Device();
+	//создаём представление для вывода на экран инфы по устройствам
+      DeviceView devView = new DeviceView();      
 	  DeviceController dev = new DeviceController(devmodel, devView);
+
 	//инициализируем и определяем покупателя
       Customer model  = new Customer();
   //создаём представление для вывода на экран инфы по покупателям
@@ -53,6 +54,10 @@ public class Controller {
 	 {
 		 view.helpDevice();
 	 }
+	 private void back2main()
+	 {
+		 view.youAreBack();
+	 }
 	  public void setCustomers()//забиваем список клиентов
 	  {
 		  cus.setCustomers();
@@ -70,7 +75,7 @@ public class Controller {
 		  case "-help"://ветка помощи
 			  view.help();
 			  this.wait4User();
-		  case "-customers"://ветка клиентов
+		  case ("-customers")://ветка клиентов
 			  cus.updateView();
 			  this.nextStep();
 		  case "-sales"://ветка продаж
@@ -78,8 +83,8 @@ public class Controller {
 		  case "-devices"://ветка устройств
 			  dev.updateView();
 			  this.nextStepD();
-			  this.wait4User();
-		  default:
+			  
+	    default:
 			  this.angryView();
 			  this.wait4User();
 			  
@@ -89,84 +94,106 @@ public class Controller {
 	 
 	 private void nextStep()//работа с клиентами. Сортировки, поиски
 	 {
-		 this.helpCustomer();
+		 
 		 in = new Scanner(System.in);
 		  String a = in.next().toLowerCase() ;//считываем, нечуствительно к регистру
 		  switch (a){
 		  case "-sortbyname":
+		  {
 			  cus.sortByName();
 			  cus.updateView();
-			  this.nextStep();
+			  break;
+		  }
+
+			  
 		  case "-sortbyid":
+		  {
 			  cus.sortById();
 			  cus.updateView();
-			  this.nextStep();
+			  break;
+		  }
+
 		  case "-sortbyyear":
+		  {
 			  cus.sortByYear();
 			  cus.updateView();
 			  this.nextStep();
-		  case "-findbyname":
-
-			  this.nextStep();
-		  case "-findbyid":
-
-			  this.nextStep();
-		  case "-findbyyear":
-
-			  this.nextStep();
-		  case "-addcustomer":
+		  }
 			  
-			  this.nextStep();
+		  case "-findbyname":
+			  break;
+		  case "-findbyid":
+			 break;
+		  case "-findbyyear":
+			  break;
+
+			  
+		  case "-addcustomer":
+			 break;
 		  case "-back":
+		  {
 			  this.updateView();
 			  this.wait4User();
-			  
+			  break;
+		  }
+
+		  case "-help":
+		  {
+			  this.helpCustomer();//вьюшка помощи
+			  break;
+		  }
 			default: this.angryView();
 		  }
+		  this.nextStep();;
 
 	 }
-	 private void nextStepD(){
-		 this.helpDevice();
+	 private void nextStepD()//работа с устройствами
+	 {
 		 in = new Scanner(System.in);
-		  String a = in.next().toLowerCase() ;//считываем, нечуствительно к регистру
-		  switch (a){
-		  case "-sortbytype":
-			  dev.sortByType();
-			  dev.updateView();
-			  this.nextStepD();
-		  case "-sortbycolor":
-			  dev.sortByColor();
-			  dev.updateView();
-			  this.nextStep();
-		  case "-sortbymark":
-			  dev.sortByMark();
-			  dev.updateView();
-			  this.nextStepD();
-		  case "-sortbyid":
-			  dev.sortById();
-			  dev.updateView();
-			  this.nextStepD();
-		  case "-sortbyyear":
-			  dev.sortByYear();
-			  dev.updateView();
-			  this.nextStepD();
-		  case "-findbyname":
-
-			  this.nextStepD();
-		  case "-findbyid":
-
-			  this.nextStepD();
-		  case "-findbyyear":
-
-			  this.nextStepD();
-		  case "-addcustomer":
-			  
-			  this.nextStepD();
-		  case "-back":
-			  this.updateView();
-			  this.wait4User();
-			  
-			default: this.angryView();
-		  }
+		 String d = in.next().toLowerCase();
+		 switch (d){
+		 case "-sortbytype":{
+			    dev.sortByType();
+				dev.updateView();
+				break;
+		 }
+		 case "-sortbymark":
+		 {
+			    dev.sortByMark();
+				dev.updateView();
+				break;
+		 }
+		 case"-sortbycolor":
+		 {
+			    dev.sortByColor();
+				dev.updateView();
+				break;
+		 }
+		 case"-sortbyyear":
+		 {
+			    dev.sortByYear();
+				dev.updateView();
+				break;
+		 }
+		 case "-sortbyid":
+		 {
+			 dev.sortById();
+				dev.updateView();
+				break;
+		 }
+		 case "-help":
+			 this.helpDevice();
+			 break;
+		 case "-back":
+		 {
+			 this.back2main();
+			 this.wait4User();
+			 break;
+		 }
+		 default: this.angryView();
+		 break;
+		 }
+		this.nextStepD();
+	 
 	 }
 }

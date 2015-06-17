@@ -8,9 +8,8 @@ import model.data.Device;
 public class DeviceColorComparator implements Comparator<Device>{
 
 	@Override
-	public int compare(Device dev1, Device dev2) {
+	public int compare(Device cus1, Device cus2) {
 
-		 return dev1.getColor().compareTo(dev1.getColor());
+		 return cus1.getColor().compareTo(cus2.getColor());
 	}
-
 }
