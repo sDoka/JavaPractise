@@ -1,8 +1,14 @@
 package model.data;
-
+import java.util.Collections;
 import java.util.ArrayList;
 
+
+
+
 import model.data.stores.CustomersStore;
+import model.data.comparator.CustomerFioComparator;
+import model.data.comparator.CustomerIdComparator;
+import model.data.comparator.CustomerYearComparator;
 /*
  * в модели описываем поля сущности покупатель
  * и методы работы с ними
@@ -53,11 +59,26 @@ public class Customer {
 	      this.name = name;
 	   }
 	   
-	public  ArrayList<Customer> makeCustomers()
+	public  ArrayList<Customer> makeCustomers()//создание списка клиентов
 	{
 		
 		CustomersStore cus  = new CustomersStore();
 		return cus.makeCustomers();
+	}
+	public  ArrayList<Customer> sortByName(ArrayList<Customer> inList)
+	{
+		Collections.sort(inList,new CustomerFioComparator());
+		return inList;
+	}
+	public  ArrayList<Customer> sortById(ArrayList<Customer> inList)
+	{
+		Collections.sort(inList,new CustomerIdComparator());
+		return inList;
+	}
+	public  ArrayList<Customer> sortByYear(ArrayList<Customer> inList)
+	{
+		Collections.sort(inList,new CustomerYearComparator());
+		return inList;
 	}
 	   
 	   

@@ -15,7 +15,7 @@ public class Main {
 		 View mainView = new View();
 		 Controller control = new Controller(mainView);
 		 control.setCustomers();//создаём список покупателей
-		 
+		 control.setDevices();//создаём список устройств
 		 control.updateView();//показвыаем привественную надпись
 		 control.wait4User();//ждём ввода от пользователя и реагируем соответственно
 	   }

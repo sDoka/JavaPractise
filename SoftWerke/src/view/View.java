@@ -13,10 +13,40 @@ public class View {
 		 System.out.println("-customers     -показать всех клиентов");
 		 System.out.println("-sales         -показать все продажи");
 		 System.out.println("-devices       -показать все устройства");
-		 System.out.println("-new sale      -продать устройство");
-		 System.out.println("-new customer  -добавить покупателя");
-		 System.out.println("-new device    -добавить устройство");
-		 
+	 }
+	 public void helpCustomer()
+	 {
+		 System.out.println("Способы сортировок");
+		 System.out.println("-sortByName       -По имени");
+		 System.out.println("-sortById         -По Id");
+		 System.out.println("-sortByYear       -По году рождения");
+		 System.out.println("------------------------------------");
+		 System.out.println("Способы поиска");
+		 System.out.println("-findByName   Имя    -По имени");
+		 System.out.println("-findById     Id     -По Id");
+		 System.out.println("-findByYear   Год    -По году рождения");
+		 System.out.println("------------------------------------");
+		 System.out.println("-addCustomer Имя ГодРождения      -Добавить клиента");
+		 System.out.println("-back             				   -Вернуться в главное меню");
+	 }
+	 public void helpDevice()
+	 {
+		 System.out.println("Способы сортировок");
+		 System.out.println("-sortByType       -По типу устройства");
+		 System.out.println("-sortByColor      -По цвету устройства");
+		 System.out.println("-sortByMark       -По марке устройства");
+		 System.out.println("-sortById         -По Id");
+		 System.out.println("-sortByYear       -По году выпуска");
+		 System.out.println("------------------------------------");
+		 System.out.println("Способы поиска");
+		 System.out.println("-findByType       -По типу устройства");
+		 System.out.println("-findByColor      -По цвету устройства");
+		 System.out.println("-findByMark       -По марке устройства");
+		 System.out.println("-findById         -По Id");
+		 System.out.println("-findByYear       -По году выпуска");
+		 System.out.println("------------------------------------");
+		 System.out.println("-addCustomer Имя ГодРождения      -Добавить клиента");
+		 System.out.println("-back             				   -Вернуться в главное меню");
 	 }
 	 public void wrongCommand()
 	 {

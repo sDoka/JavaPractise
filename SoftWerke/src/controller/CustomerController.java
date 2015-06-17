@@ -46,4 +46,21 @@ public class CustomerController {
 	   public void updateView(){//обновляет представление, вызывает метод вывода на экран				
 	      view.printCustomerDetails(cusList);
 	   }	
+	   public ArrayList<Customer> getList()
+	   {
+		   return cusList;
+	   }
+	   
+	   public   ArrayList<Customer> sortByName()
+	   {
+		   return model.sortByName(cusList);
+	   }
+	   public   ArrayList<Customer> sortById()
+	   {
+		   return model.sortById(cusList);
+	   }
+	   public   ArrayList<Customer> sortByYear()
+	   {
+		   return model.sortByYear(cusList);
+	   }
 	}

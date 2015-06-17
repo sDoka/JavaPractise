@@ -1,8 +1,7 @@
 package model.data;
 
-import java.util.ArrayList;
+
 import java.util.Date;
-import java.util.Random;
 
 public class Sale {
 //дата, устройство, клиент‘»ќ
@@ -35,7 +34,7 @@ public class Sale {
 	{
 		return customerFIO;
 	}
-	public void setCustomerFIO(String CustomerFIO)
+	public void setCustomerFIO(String customerFIO)
 	{
 		this.customerFIO = customerFIO;
 	}
