@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 
 //для покупателя
-import model.Customer;
+
+import model.data.Customer;
 import controller.CustomerController;
 import view.CustomerView;
 

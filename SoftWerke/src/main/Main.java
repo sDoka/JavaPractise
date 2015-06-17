@@ -1,5 +1,7 @@
 package main;
 
+
+
 import view.View;
 import controller.Controller;
 
@@ -8,7 +10,7 @@ import controller.Controller;
 public class Main {
 	 public static void main(String[] args) {
 		 //забиваем списки покупателей
-		 
+
 		 //Общее представление. Для работы с юзером
 		 View mainView = new View();
 		 Controller control = new Controller(mainView);

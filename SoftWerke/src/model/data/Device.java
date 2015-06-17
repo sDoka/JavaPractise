@@ -3,7 +3,7 @@
  * и методы работы с ними
  * 
  */
-package model;
+package model.data;
 
 public class Device {
 //тип, цвет, дата выпуска

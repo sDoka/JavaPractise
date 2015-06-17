@@ -4,7 +4,7 @@ package controller;
 import java.util.ArrayList;
 
 import view.CustomerView;
-import model.Customer;
+import model.data.Customer;
 
 /*
  * Контроллер клиента 

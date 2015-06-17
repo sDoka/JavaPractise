@@ -2,7 +2,7 @@ package view;
 
 import java.util.ArrayList;
 
-import model.Customer;
+import model.data.Customer;
 
 public class CustomerView {
 	 public void printCustomerDetails(ArrayList<Customer> cusList){
